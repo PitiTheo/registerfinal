@@ -7,13 +7,15 @@ export function Home() {
 		<CardGroup>
 			<Card>
 				<Card.Body>
-					<Card.Title>Register</Card.Title>
+					<Card.Title>
+						<h1>Register</h1>
+					</Card.Title>
 
 					<br />
 
 					<div>
 						<Form>
-							<Form.Label>Account's type</Form.Label>
+							<Form.Label>Type of Account</Form.Label>
 							<Form.Control as="select">
 								<option>User</option>
 								<option>Pet Buddy</option>
@@ -68,9 +70,9 @@ export function Home() {
 			</Card>
 			<Card>
 				<Card.Img
-					variant="top"
-					src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2019/04/02/5fa523c44bc98.jpeg"
-					fluid
+					variant="center"
+					src="https://i.pinimg.com/originals/69/01/49/690149102923eab1898e3ab9eb138d62.jpg"
+					thumbnail
 				/>
 			</Card>
 		</CardGroup>
