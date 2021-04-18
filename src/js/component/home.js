@@ -27,7 +27,10 @@ export function Home() {
 					<br />
 
 					<div>
-						<Form>
+						<Form
+							noValidate
+							validated={validated}
+							onSubmit={handleSubmit}>
 							<Form.Label>Type of Account</Form.Label>
 							<Form.Control as="select">
 								<option>User</option>
@@ -35,61 +38,61 @@ export function Home() {
 							</Form.Control>
 
 							<br />
-							<Form
-								noValidate
-								validated={validated}
-								onSubmit={handleSubmit}>
-								<Form.Group controlId="validationCustom01">
-									<Form.Label>Name</Form.Label>
-									<Form.Control
-										required
-										type="name"
-										placeholder="Enter name"
-									/>
-								</Form.Group>
 
-								<br />
+							<Form.Group controlId="validationCustom01">
+								<Form.Label>Name</Form.Label>
+								<Form.Control
+									required
+									type="name"
+									placeholder="Enter name"
+								/>
+							</Form.Group>
 
-								<Form.Group controlId="formBasiclastname">
-									<Form.Label>Last Name</Form.Label>
-									<Form.Control
-										type="lastname"
-										placeholder="Enter lastname"
-									/>
-									<Form.Text className="text-muted"></Form.Text>
-								</Form.Group>
+							<br />
 
-								<br />
+							<Form.Group controlId="formBasiclastname">
+								<Form.Label>Last Name</Form.Label>
+								<Form.Control
+									required
+									type="lastname"
+									placeholder="Enter lastname"
+								/>
+								<Form.Text className="text-muted"></Form.Text>
+							</Form.Group>
 
-								<Form.Group controlId="formBasicEmail">
-									<Form.Label>Email address</Form.Label>
-									<Form.Control
-										type="email"
-										placeholder="Enter email"
-									/>
-									<Form.Text className="text-muted"></Form.Text>
-								</Form.Group>
+							<br />
 
-								<br />
+							<Form.Group controlId="formBasicEmail">
+								<Form.Label>Email address</Form.Label>
+								<Form.Control
+									required
+									type="email"
+									placeholder="Enter email"
+								/>
+								<Form.Text className="text-muted"></Form.Text>
+							</Form.Group>
 
-								<Form.Group controlId="formBasicPassword">
-									<Form.Label>Password</Form.Label>
-									<Form.Control
-										type="password"
-										placeholder="Password"
-									/>
-								</Form.Group>
+							<br />
 
-								<br />
+							<Form.Group controlId="formBasicPassword">
+								<Form.Label>Password</Form.Label>
+								<Form.Control
+									required
+									type="password"
+									placeholder="Password"
+								/>
+							</Form.Group>
 
-								<Form.Group controlId="formBasicconfirmpassword">
-									<Form.Label>Confirm Password</Form.Label>
-									<Form.Control
-										type="confirmpassword"
-										placeholder="Confirm Password"
-									/>
-								</Form.Group>
-							</Form>
+							<br />
+
+							<Form.Group controlId="formBasicconfirmpassword">
+								<Form.Label>Confirm Password</Form.Label>
+								<Form.Control
+									required
+									type="confirmpassword"
+									placeholder="Confirm Password"
+								/>
+							</Form.Group>
 
 							<br />
 
