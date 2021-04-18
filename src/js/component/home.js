@@ -1,8 +1,21 @@
 import React from "react";
+import { useState } from "react";
 import { Card, CardGroup } from "react-bootstrap";
 import { Form, Button } from "react-bootstrap";
 
 export function Home() {
+	const [validated, setValidated] = useState(false);
+
+	const handleSubmit = event => {
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
+
+		setValidated(true);
+	};
+
 	return (
 		<CardGroup>
 			<Card>
@@ -22,56 +35,81 @@ export function Home() {
 							</Form.Control>
 
 							<br />
+							<Form
+								noValidate
+								validated={validated}
+								onSubmit={handleSubmit}>
+								<Form.Group controlId="validationCustom01">
+									<Form.Label>Name</Form.Label>
+									<Form.Control
+										required
+										type="name"
+										placeholder="Enter name"
+									/>
+								</Form.Group>
 
-							<Form.Group controlId="formBasicname">
-								<Form.Label>Name</Form.Label>
-								<Form.Control
-									type="name"
-									placeholder="Enter name"
-								/>
-								<Form.Text className="text-muted"></Form.Text>
-							</Form.Group>
+								<br />
 
-							<Form.Group controlId="formBasiclastname">
-								<Form.Label>Last Name</Form.Label>
-								<Form.Control
-									type="lastname"
-									placeholder="Enter lastname"
-								/>
-								<Form.Text className="text-muted"></Form.Text>
-							</Form.Group>
+								<Form.Group controlId="formBasiclastname">
+									<Form.Label>Last Name</Form.Label>
+									<Form.Control
+										type="lastname"
+										placeholder="Enter lastname"
+									/>
+									<Form.Text className="text-muted"></Form.Text>
+								</Form.Group>
 
-							<Form.Group controlId="formBasicEmail">
-								<Form.Label>Email address</Form.Label>
-								<Form.Control
-									type="email"
-									placeholder="Enter email"
-								/>
-								<Form.Text className="text-muted"></Form.Text>
-							</Form.Group>
+								<br />
 
-							<Form.Group controlId="formBasicPassword">
-								<Form.Label>Password</Form.Label>
-								<Form.Control
-									type="password"
-									placeholder="Password"
-								/>
-							</Form.Group>
+								<Form.Group controlId="formBasicEmail">
+									<Form.Label>Email address</Form.Label>
+									<Form.Control
+										type="email"
+										placeholder="Enter email"
+									/>
+									<Form.Text className="text-muted"></Form.Text>
+								</Form.Group>
+
+								<br />
+
+								<Form.Group controlId="formBasicPassword">
+									<Form.Label>Password</Form.Label>
+									<Form.Control
+										type="password"
+										placeholder="Password"
+									/>
+								</Form.Group>
+
+								<br />
+
+								<Form.Group controlId="formBasicconfirmpassword">
+									<Form.Label>Confirm Password</Form.Label>
+									<Form.Control
+										type="confirmpassword"
+										placeholder="Confirm Password"
+									/>
+								</Form.Group>
+							</Form>
+
+							<br />
 
 							<Button variant="primary" type="submit">
 								Submit
 							</Button>
 						</Form>
+
+						<br />
+
+						<small className="text-muted">
+							Have already accont?
+						</small>
 					</div>
 				</Card.Body>
-				<Card.Footer>
-					<small className="text-muted">Have already accont?</small>
-				</Card.Footer>
 			</Card>
 			<Card>
 				<Card.Img
 					variant="center"
-					src="https://i.pinimg.com/originals/69/01/49/690149102923eab1898e3ab9eb138d62.jpg"
+					src="https://jngnposwzs-flywheel.netdna-ssl.com/wp-content/uploads/2019/05/Transparent-OrangeWhiteCat-764x1024.png"
 					thumbnail
 				/>
 			</Card>
