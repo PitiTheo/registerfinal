@@ -32,10 +32,18 @@ export function Home() {
 							validated={validated}
 							onSubmit={handleSubmit}>
 							<div>
-								<Button variant="primary" size="sm">
+								<h5> Type of user </h5>
+								<br />
+								<Button
+									variant="primary"
+									size="sm"
+									onClick={focus}>
 									user
 								</Button>{" "}
-								<Button variant="secondary" size="sm">
+								<Button
+									variant="secondary"
+									size="sm"
+									onClick={focus}>
 									buddy
 								</Button>
 							</div>
