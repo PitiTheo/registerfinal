@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Card, CardGroup } from "react-bootstrap";
 import { Form, Button } from "react-bootstrap";
 
-export function Home() {
+export function Login() {
 	const [validated, setValidated] = useState(false);
 
 	const handleSubmit = event => {
@@ -21,7 +21,8 @@ export function Home() {
 			<Card>
 				<Card.Body>
 					<Card.Title>
-						<h1>Register</h1>
+						<img src="../../img/petbnb.jpeg" />
+						<h1>Log In</h1>
 					</Card.Title>
 
 					<br />
@@ -31,38 +32,6 @@ export function Home() {
 							noValidate
 							validated={validated}
 							onSubmit={handleSubmit}>
-							<div>
-								<Button variant="primary" size="sm">
-									user
-								</Button>{" "}
-								<Button variant="secondary" size="sm">
-									buddy
-								</Button>
-							</div>
-
-							<br />
-
-							<Form.Group controlId="validationCustom01">
-								<Form.Label>Name</Form.Label>
-								<Form.Control
-									required
-									type="name"
-									placeholder="Enter name"
-								/>
-							</Form.Group>
-
-							<br />
-
-							<Form.Group controlId="formBasiclastname">
-								<Form.Label>Last Name</Form.Label>
-								<Form.Control
-									required
-									type="lastname"
-									placeholder="Enter lastname"
-								/>
-								<Form.Text className="text-muted"></Form.Text>
-							</Form.Group>
-
 							<br />
 
 							<Form.Group controlId="formBasicEmail">
@@ -88,37 +57,24 @@ export function Home() {
 
 							<br />
 
-							<Form.Group controlId="formBasicconfirmpassword">
-								<Form.Label>Confirm Password</Form.Label>
-								<Form.Control
-									required
-									type="confirmpassword"
-									placeholder="Confirm Password"
-								/>
-							</Form.Group>
-
-							<br />
-
 							<Button
 								variant="primary"
 								type="submit"
-								style={{ backgroundColor: "#de681f" }}>
-								Submit
+								style={{ backgroundColor: "orange" }}>
+								Login
 							</Button>
 						</Form>
 
 						<br />
 
-						<small className="text-muted">
-							Have already accont?
-						</small>
+						<small className="text-muted">Forgot password?</small>
 					</div>
 				</Card.Body>
 			</Card>
 			<Card>
 				<Card.Img
 					variant="center"
-					src="https://jngnposwzs-flywheel.netdna-ssl.com/wp-content/uploads/2019/05/Transparent-OrangeWhiteCat-764x1024.png"
+					src="https://www.doggypark.com.co/wp-content/uploads/2020/10/Pastor-Caucasico2.jpg"
 					thumbnail
 				/>
 			</Card>
