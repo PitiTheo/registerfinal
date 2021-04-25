@@ -9,7 +9,7 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //import your own components
-import { Resetpassword } from "./component/resetpassword.js";
+import { Dashboard } from "./component/dashboard.js";
 
 //render your react application
-ReactDOM.render(<Resetpassword />, document.querySelector("#app"));
+ReactDOM.render(<Dashboard />, document.querySelector("#app"));
