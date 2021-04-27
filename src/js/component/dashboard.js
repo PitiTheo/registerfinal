@@ -60,6 +60,14 @@ export function Dashboard() {
 
 							<br />
 
+							<Form.Group controlId="formBasicEmail">
+								<Form.Label>Telephone</Form.Label>
+								<Form.Control
+									type="telephone"
+									placeholder="+506 ____-____"
+								/>
+							</Form.Group>
+
 							<Form.Label style={{ marginBottom: "20px" }}>
 								Date of birth
 							</Form.Label>
@@ -129,15 +137,26 @@ export function Dashboard() {
 								</Form.Group>
 							</Form.Row>
 						</Form.Group>
-						<Form.Group controlId="formBasicPassword">
-							<Form.Label>Apellidos</Form.Label>
-							<Form.Control
-								type="password"
-								placeholder="Password"
-							/>
-						</Form.Group>
-						<Form>
+						<Form.Group controlId="exampleForm.ControlSelect1">
+							<Form.Label>State</Form.Label>
+							<Form.Control as="select">
+								<option>Alajuela</option>
+								<option>Cartago</option>
+								<option>San Jose</option>
+								<option>Heredia</option>
+								<option>Limon</option>
+								<option>Guanacaste</option>
+							</Form.Control>
+
 							<br />
+
+							<Form.Group controlId="exampleForm.ControlTextarea1">
+								<Form.Label>Exact address</Form.Label>
+								<Form.Control as="textarea" rows={3} />
+							</Form.Group>
+						</Form.Group>
+
+						<Form>
 							<Form>
 								<Form.Label style={{ marginBottom: "20px" }}>
 									Accepted weight for pet
@@ -170,21 +189,46 @@ export function Dashboard() {
 
 								<br />
 							</Form>
+						</Form>
+						<Form>
+							<Form>
+								<Form.Label style={{ marginBottom: "20px" }}>
+									Services provided
+								</Form.Label>
 
-							<Form.Group controlId="exampleForm.ControlSelect1">
-								<Form.Label>Provincia</Form.Label>
-								<Form.Control as="select">
-									<option>Alajuela</option>
-									<option>Cartago</option>
-									<option>San Jose</option>
-									<option>Heredia</option>
-									<option>Limon</option>
-									<option>Guanacaste</option>
-								</Form.Control>
-							</Form.Group>
+								{["checkbox"].map(type => (
+									<div
+										key={`inline-${type}`}
+										className="mr-6">
+										<Form.Check
+											inline
+											label="dog Walker"
+											type={type}
+											id={`inline-${type}-4`}
+										/>
+										<Form.Check
+											inline
+											label="lodging"
+											type={type}
+											id={`inline-${type}-5`}
+										/>
+										<Form.Check
+											inline
+											label="dog daycare"
+											type={type}
+											id={`inline-${type}-6`}
+										/>
+									</div>
+								))}
+							</Form>
+
+							<br />
+
 							<Form.Group controlId="exampleForm.ControlTextarea1">
-								<Form.Label>Exact address</Form.Label>
-								<Form.Control as="textarea" rows={3} />
+								<Form.Label>
+									Comments about you and additional skills
+								</Form.Label>
+								<Form.Control as="textarea" rows={8} />
 							</Form.Group>
 						</Form>
 					</Card.Text>
