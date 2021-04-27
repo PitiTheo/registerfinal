@@ -226,9 +226,23 @@ export function Dashboard() {
 
 							<Form.Group controlId="exampleForm.ControlTextarea1">
 								<Form.Label>
-									Comments about you and additional skills
+									Brief description about service
 								</Form.Label>
-								<Form.Control as="textarea" rows={8} />
+								<Form.Control as="textarea" rows={4} />
+							</Form.Group>
+
+							<br />
+
+							<Form.Group controlId="exampleForm.ControlTextarea1">
+								<Form.Label>About me</Form.Label>
+								<Form.Control as="textarea" rows={3} />
+							</Form.Group>
+
+							<br />
+
+							<Form.Group controlId="exampleForm.ControlTextarea1">
+								<Form.Label>Additional skills</Form.Label>
+								<Form.Control as="textarea" rows={2} />
 							</Form.Group>
 						</Form>
 					</Card.Text>
